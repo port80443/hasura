@@ -1,0 +1,8 @@
+type: bulk
+args:
+- type: run_sql
+  args:
+    sql: |
+      drop table author;
+      drop table article;
+      drop table misgivings;

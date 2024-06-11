@@ -1,0 +1,17 @@
+type: bulk
+args:
+- type: delete_event_trigger
+  args:
+    name: t1_retry
+- type: delete_event_trigger
+  args:
+    name: t2_timeout_short
+- type: delete_event_trigger
+  args:
+    name: t3_timeout_long
+- type: run_sql
+  args:
+    sql: |
+      drop table hge_tests.test_t1;
+      drop table hge_tests.test_t2;
+      drop table hge_tests.test_t3;

@@ -1,0 +1,27 @@
+type: bulk
+args:
+
+#Drop relationships
+
+- type: drop_relationship
+  args:
+    relationship: author_simple
+    table:
+      schema: public
+      name: article
+
+- type: drop_relationship
+  args:
+    relationship: author_complex
+    table:
+      schema: public
+      name: article
+
+#Drop views and tables
+- type: run_sql
+  args:
+    sql: |
+      drop view author_simple;
+      drop view author_complex;
+      drop table article;
+      drop table author;

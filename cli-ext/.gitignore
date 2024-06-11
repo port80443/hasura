@@ -1,0 +1,5 @@
+bin
+build
+_tmptests
+node_modules
+version.json
